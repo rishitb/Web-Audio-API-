@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Web Audio API Demo</title>
+</head>
+<body>
+<marquee style="color:#051A96"><h1>Web Audio API Synth</h1></marquee>
+<fieldset>
+<h2 style="text-decoration:underline">Oscillator</h2><br>
+<button onClick="Play()" style="border-radius: 3px;box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);">PLAY</button>
+<button onClick="Pause()" style="border-radius: 3px;box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);">STOP</button>
+<h4>Wave Type</h4>
+<select name="Wave Shape" onChange="oscWaveType()" id="oscWS">
+<option value="sine">Sine</option>
+<option value="square">Square</option>
+<option value="sawtooth">Sawtooth</option>
+<option value="triangle">Triangle</option>
+</select>
+<br>
+<h4>Frequency Controller</h4>
+<input id="freq" type="range" min="50" max="4000" step="10" value="250"/><br>
+</fieldset>
+<fieldset>
+<h2 style="text-decoration:underline">Oscillator with Filter</h2><br>
+<button onClick="FilterIt()" style="border-radius: 3px;box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);">PLAY</button>
+<button onClick="FilterStop()" style="border-radius: 3px;box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);">STOP</button>
+<h4>Wave Type</h4>
+<select name="Wave Shape" onChange="osc2WaveType()" id="osc2WS">
+<option value="sine">Sine</option>
+<option value="square">Square</option>
+<option value="sawtooth">Sawtooth</option>
+<option value="triangle">Triangle</option>
+</select>
+<h4>Filter Type</h4>
+<select name="Filter Type" onChange="selectFilter()" id="osc2FS">
+<option value="lowpass">Lowpass</option>
+<option value="highpass">Highpass</option>
+<option value="bandpass">Bandpass</option>
+<option value="lowshelf">Lowshelf</option>
+<option value="highshelf">Highshelf</option>
+<option value="peaking">Peaking</option>
+<option value="notch">Notch</option>
+<option value="allpass">Allpass</option>
+</select>
+<br>
+<h4>Wave Frequency Controller</h4>
+<input id="freq2" type="range" min="50" max="4000" step="10" value="250"/><br>
+
+<h4>Filter Frequency Controller</h4>
+<input id="filterfreq" type="range" min="0" max="4000" step="1" value="250"/><br>
+</fieldset>
+<script src="myaudio.js"></script>
+
+</body>
+</html>
